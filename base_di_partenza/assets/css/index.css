@@ -36,7 +36,7 @@ nav * {
 header section {
   background-color: #ffc017;
   border: 1px solid black;
-  padding: 3em 2em 3em 2em;
+  padding: 6em 2em 3.5em 2em;
 }
 
 .top-section h1 {
@@ -56,9 +56,52 @@ header section {
   padding: 0.5em 3em;
   border-radius: 20px;
   font-size: large;
-  margin-top: 1em;
+  margin-top: 3em;
   margin-bottom: 2em;
 }
+
+/* MAIN  */
+
+main {
+  padding-top: 2.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: 2em;
+}
+
+.riga-trending {
+  display: flex;
+  align-items: center;
+}
+
+#arrow-trend-up {
+  width: 20px;
+  margin-right: 1em;
+}
+
+.trend-1 h3 img {
+  width: 50%;
+}
+
+ol {
+  counter-reset: list;
+  list-style: none;
+}
+
+ol li {
+  counter-increment: list;
+  margin-bottom: 5px;
+}
+
+ol li::before {
+  content: counter(list, decimal-leading-zero) ' ';
+}
+
+section ol li img {
+  border-radius: 50%;
+  width: 5%;
+}
+
 /* <!-- ARTWORK con "M" ripetute -->  */
 #artwork-m {
   display: none;
