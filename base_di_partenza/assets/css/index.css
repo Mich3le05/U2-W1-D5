@@ -25,6 +25,10 @@ nav * {
   display: inline;
 }
 
+.tre-div-nav {
+  display: none;
+}
+
 .nav-big {
   background-color: #181918;
   color: white;
@@ -69,7 +73,6 @@ header section {
 
 main {
   padding-top: 2.5em;
-  padding-bottom: 2em;
 }
 
 .riga-trending {
@@ -150,7 +153,7 @@ main {
 }
 
 article {
-  padding: 2.5em 1.5em 2.5em 1.5em;
+  padding: 2.5em 1.5em 0em 1.5em;
 }
 
 /* SECTION 2  */
@@ -204,12 +207,18 @@ article {
 
 .section3 ol li {
   font-size: 1.2em;
+  margin-bottom: 2.5em;
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .section3 ol li a img {
   border-radius: 50%;
   width: 22px;
   margin-right: 0.5rem;
+  margin-left: 0;
 }
 
 .section3 a {
@@ -219,6 +228,7 @@ article {
   text-decoration: none;
   margin-top: 0.5em;
   font-size: 0.8em;
+  font-weight: bold;
 }
 
 .section3 h4 {
@@ -226,12 +236,15 @@ article {
   margin: 0.3em 0em 0.5em 0em;
   font-weight: bold;
   font-size: 1.3em;
+  color: black;
 }
 
 .section3 p {
   color: #a9a9a9;
   font-size: 0.8em;
   margin-top: 1em;
+  display: flex;
+  align-items: center;
 }
 
 .section3 strong {
@@ -241,11 +254,70 @@ article {
 }
 
 .section3 ol li img {
-  width: 200px;
-  float: inline-end;
+  width: 205px;
   margin-left: 1em;
+  align-self: center;
 }
 
-.section3 span {
-  float: inline-end;
+#imgstar {
+  width: 20px;
+  margin-left: 0.3em;
+}
+
+#imgbookmark {
+  width: 25px;
+  margin-left: auto;
+}
+
+/* GLI STILI "TABLET" */
+@media screen and (min-width: 576px) {
+  /* HEADER  */
+  .tre-div-nav {
+    display: inline;
+  }
+
+  .nav-small {
+    padding-right: 0.5em;
+  }
+
+  .nav-big {
+    margin-left: 0;
+  }
+
+  /* <!-- ARTWORK con "M" ripetute -->  */
+  #artwork-m {
+    display: flex;
+  }
+  .svg-container {
+    display: flex;
+    justify-content: flex-start; /* Allinea gli elementi all'inizio del contenitore */
+    padding-right: 2em; /* Aggiunge uno spazio a destra del contenitore */
+  }
+
+  .text-container {
+    margin-left: 2em; /* Regola lo spazio tra immagine e testo */
+  }
+
+  /* SECTION 1  */
+  .section1 ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .section1 li {
+    width: 48%;
+    box-sizing: border-box;
+  }
+}
+
+/* GLI STILI "LAPTOP" */
+@media screen and (min-width: 768px) {
+}
+
+/* GLI STILI "DESKTOP" */
+@media screen and (min-width: 992px) {
+  .hr2 {
+    display: none;
+  }
 }
