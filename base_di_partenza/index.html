@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Medium</title>
+    <!-- FOGLIO RESET  -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
+    <!-- LINK FONT GOOGLE  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- LINK FONT SPECTRAL  -->
     <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    />
+    <!-- LINK FONT ROBOTO  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="top-nav">
         <img src="../base_di_partenza/assets/imgs/svg/logo.svg" alt="logo" />
         <div>
           <div class="tre-div-nav">
@@ -30,16 +37,15 @@
         </div>
       </nav>
       <section class="top-section">
+        <div class="text-container">
+          <h1>Stay curious.</h1>
+          <p>
+            Discover stories, thinking, and expertise from writers on any topic.
+          </p>
+          <button class="top-button">Start reading</button>
+        </div>
         <!-- ARTWORK con "M" ripetute -->
         <div class="svg-container">
-          <div class="text-container">
-            <h1>Stay curious.</h1>
-            <p>
-              Discover stories, thinking, and expertise from writers on any
-              topic.
-            </p>
-            <button class="top-button">Start reading</button>
-          </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 585 462"
@@ -52,7 +58,6 @@
               transform: translate3d(0px, 0px, 0px);
               content-visibility: visible;
             "
-            id="artwork-m"
           >
             <defs>
               <clipPath id="__lottie_element_3372">
@@ -67,22 +72,22 @@
                 font-style="normal"
                 font-weight="normal"
                 aria-label=" M M M M M M M M M M M M M M
-          M M M M M M M M M M M M M M M M M M M M M
-         M M M M M M M M M M M M M M M M M M M M M M M M M
-          M M M M M M M M M M M M
-          M M M M M M M M M M M M M M M M M M M
-          M M M M M M M M M M M M M M M M M M M M M
-          M M M M M M M M M M M M M M
-         M M M M M M M M M M M M M M M M M
-         M M M M M M M M M M M M M M M M M M M
-          M M M M M M M M M M M M M M M M M M M M M M M
-         M M M M M M M M M M M M
-          M M M M M M M M M M M M
-          M M M M M M M M M M M M M M M M M M M M M
-          M M M M M M M M M M M
-          M M M M M M M M M M M M M M M M M
-          M M M M M M M M M M M M M M M M
-         "
+        M M M M M M M M M M M M M M M M M M M M M
+       M M M M M M M M M M M M M M M M M M M M M M M M M
+        M M M M M M M M M M M M
+        M M M M M M M M M M M M M M M M M M M
+        M M M M M M M M M M M M M M M M M M M M M
+        M M M M M M M M M M M M M M
+       M M M M M M M M M M M M M M M M M
+       M M M M M M M M M M M M M M M M M M M
+        M M M M M M M M M M M M M M M M M M M M M M M
+       M M M M M M M M M M M M
+        M M M M M M M M M M M M
+        M M M M M M M M M M M M M M M M M M M M M
+        M M M M M M M M M M M
+        M M M M M M M M M M M M M M M M M
+        M M M M M M M M M M M M M M M M
+       "
                 transform="matrix(1,0,0,1,291,232)"
                 opacity="1"
                 style="display: block"
@@ -9279,13 +9284,14 @@
 
           <li>
             <a href="#"
-              ><img src="./assets/imgs/image03.jpeg" alt="" /> Tom Cooper</a
+              ><img src="./assets/imgs/image03.jpeg" alt="" /> Erin A Ross in
+              Slackjaw</a
             >
             <h4>
               How I Learned to Love My Breasts Even Though One Is A Horcrux For
               Voldemort
             </h4>
-            <p><span>Oct 26</span>· <span>2 min read</span></p>
+            <p><span>Oct 26 </span> · <span> 2 min read</span></p>
           </li>
 
           <li>
@@ -9329,9 +9335,9 @@
           <button>Machine Learning</button>
           <button>Productivity</button>
           <button>Politics</button>
-        </section>
-        <hr class="hr2" />
-        <section class="section3">
+
+          <hr class="hr2" />
+
           <nav>
             <ul>
               <li>Help</li>
@@ -9345,7 +9351,8 @@
               <li>Knowable</li>
             </ul>
           </nav>
-
+        </section>
+        <section class="section3">
           <ol>
             <li>
               <div>
@@ -9551,6 +9558,6 @@
         </section>
       </article>
     </main>
-    <footer></footer>
+    <script src="./script/index.js"></script>
   </body>
 </html>

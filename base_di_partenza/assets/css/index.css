@@ -5,8 +5,8 @@
 body {
   display: flex;
   flex-direction: column;
-  font-family: 'Times New Roman', Times, serif;
-  color: black;
+  font-family: 'Roboto', sans-serif;
+  color: #191919;
   margin: 0;
 }
 
@@ -19,6 +19,15 @@ header nav {
   justify-content: space-between;
   padding: 25px 20px;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.scrolled {
+  background-color: white;
 }
 
 nav * {
@@ -35,6 +44,11 @@ nav * {
   padding: 0.7em 1.5em;
   border-radius: 30px;
   margin-left: 1em;
+  transition: background-color 1s ease-in;
+}
+
+.scrolled .nav-big {
+  background-color: #1a8917;
 }
 
 header section {
@@ -43,10 +57,22 @@ header section {
   padding: 6em 2em 3.5em 2em;
 }
 
+.top-section {
+  min-width: 400px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0;
+  margin-top: 4.7em;
+}
+
 .top-section h1 {
   font-weight: 600;
   font-size: 4em;
   margin-bottom: 0.5em;
+  font-family: 'Spectral', serif;
 }
 
 .top-section p {
@@ -65,7 +91,7 @@ header section {
 }
 
 /* <!-- ARTWORK con "M" ripetute -->  */
-#artwork-m {
+.svg-container {
   display: none;
 }
 
@@ -182,19 +208,20 @@ article {
   height: 1px;
   border: none;
   margin-bottom: 2em;
+  margin-top: 2em;
 }
 
 /* SECTION 3  */
 
-.section3 nav {
+.section2 nav {
   color: #a9a9a9;
 }
 
-.section3 ul {
+.section2 ul {
   list-style: none;
 }
 
-.section3 ul li {
+.section2 ul li {
   padding-right: 1.5em;
   line-height: 2em;
 }
@@ -271,6 +298,11 @@ article {
 
 /* GLI STILI "TABLET" */
 @media screen and (min-width: 576px) {
+  main {
+    width: 95%;
+    margin: auto;
+  }
+
   /* HEADER  */
   .tre-div-nav {
     display: inline;
@@ -285,17 +317,15 @@ article {
   }
 
   /* <!-- ARTWORK con "M" ripetute -->  */
-  #artwork-m {
-    display: flex;
-  }
   .svg-container {
     display: flex;
-    justify-content: flex-start; /* Allinea gli elementi all'inizio del contenitore */
-    padding-right: 2em; /* Aggiunge uno spazio a destra del contenitore */
+    flex-shrink: 0;
+    width: 50%;
+    overflow: hidden;
   }
 
   .text-container {
-    margin-left: 2em; /* Regola lo spazio tra immagine e testo */
+    width: 50%;
   }
 
   /* SECTION 1  */
@@ -309,15 +339,76 @@ article {
     width: 48%;
     box-sizing: border-box;
   }
-}
 
-/* GLI STILI "LAPTOP" */
-@media screen and (min-width: 768px) {
+  /* SECTION 3  */
+  .section3 {
+    width: 90%;
+  }
 }
 
 /* GLI STILI "DESKTOP" */
 @media screen and (min-width: 992px) {
-  .hr2 {
-    display: none;
+  main {
+    width: 90%;
+    margin: auto;
   }
+
+  .svg-container {
+    display: flex;
+    flex-shrink: 0;
+    width: auto;
+    overflow: hidden;
+    transform: translateY(-35px);
+  }
+
+  .text-container {
+    width: 30%;
+  }
+
+  .section1 ol {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .section1 p {
+    justify-content: normal;
+  }
+
+  .section1 li {
+    width: 30%;
+    box-sizing: border-box;
+  }
+
+  /* SECTION 2  */
+
+  .hr2 {
+    margin-top: 2em;
+  }
+
+  .section2 {
+    width: 360px;
+    float: inline-end;
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+
+  /* SECTION 3  */
+  .section3 {
+    width: 60%;
+  }
+
+  .section3 div {
+    width: 100%;
+  }
+}
+
+/* ANIMATION FOR M */
+
+g[stroke-linecap='butt'] {
+  transition: opacity 0.5s ease;
+}
+
+.opacità {
+  opacity: 0;
 }
